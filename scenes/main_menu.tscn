@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=4 uid="uid://dlriaxjp1dbl6"]
 
 [ext_resource type="FontFile" uid="uid://b32p4plrk65fb" path="res://assets/MegamaxJonathanToo-YqOq2.ttf" id="1_bqqt6"]
-[ext_resource type="Script" uid="uid://cxcpofrpj6w06" path="res://scenes/main_menu.gd" id="1_wu84c"]
+[ext_resource type="Script" uid="uid://cxcpofrpj6w06" path="res://scripts/main_menu.gd" id="1_wu84c"]
 [ext_resource type="Texture2D" uid="uid://bp2ucu1xfr32l" path="res://assets/tileset-cave.png" id="2_wu84c"]
 [ext_resource type="PackedScene" uid="uid://dpdpflowvwiht" path="res://scenes/player-start.tscn" id="3_8ln24"]
 [ext_resource type="PackedScene" uid="uid://c0jweem4jij20" path="res://scenes/person.tscn" id="5_8ln24"]

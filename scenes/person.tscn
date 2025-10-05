@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://c0jweem4jij20"]
 
-[ext_resource type="Script" uid="uid://50j13gyefjqq" path="res://person.gd" id="1_5dovg"]
+[ext_resource type="Script" uid="uid://50j13gyefjqq" path="res://scripts/person.gd" id="1_5dovg"]
 [ext_resource type="Texture2D" uid="uid://dm0n0h8x7udve" path="res://assets/output-onlinepngtools.png" id="2_jf287"]
 [ext_resource type="AudioStream" uid="uid://bltq3xiuhf1p1" path="res://assets/Picked Coin Echo 2.wav" id="3_jf287"]
 
