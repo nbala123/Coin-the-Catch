@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,7 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
-		body.position = body.init_pos
-		Global.reset()
+		self.queue_free()

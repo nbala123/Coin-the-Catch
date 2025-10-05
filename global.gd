@@ -1,17 +1,19 @@
-extends Area2D
+extends Node
 
+var people_collected = 0
+var timer = Timer.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	timer.start()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_body_entered(body: Node2D) -> void:
-	if body.has_method("player"):
-		body.position = body.init_pos
-		Global.reset()
+func collected():
+	people_collected += 1
+	
+func reset():
+	people_collected = 0

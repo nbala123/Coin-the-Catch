@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Coin the Catch"
+run/main_scene="uid://dlriaxjp1dbl6"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://global.gd"
 
 [editor_plugins]
 

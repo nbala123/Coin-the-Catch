@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bplpjstd12ohm"]
+[gd_scene load_steps=6 format=3 uid="uid://dpdpflowvwiht"]
 
-[ext_resource type="Script" uid="uid://jjrep0c0l587" path="res://scripts/player_platform.gd" id="1_73fys"]
-[ext_resource type="Texture2D" uid="uid://bp2ucu1xfr32l" path="res://assets/tileset-cave.png" id="2_r54jb"]
+[ext_resource type="Script" uid="uid://jjrep0c0l587" path="res://scripts/player_platform.gd" id="1_aq4si"]
+[ext_resource type="Texture2D" uid="uid://bp2ucu1xfr32l" path="res://assets/tileset-cave.png" id="2_viyr2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2vpp7"]
-texture = ExtResource("2_r54jb")
+texture = ExtResource("2_viyr2")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -281,7 +281,7 @@ sources/0 = SubResource("TileSetAtlasSource_2vpp7")
 radius = 6.0
 
 [node name="player-platform" type="CharacterBody2D"]
-script = ExtResource("1_73fys")
+script = ExtResource("1_aq4si")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-16, -32)
@@ -292,9 +292,3 @@ tile_set = SubResource("TileSet_f4ymm")
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_gwo0i")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-drag_left_margin = 0.05
-drag_top_margin = 0.05
-drag_right_margin = 0.05
-drag_bottom_margin = 0.05

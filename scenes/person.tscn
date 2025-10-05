@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://c0jweem4jij20"]
+
+[ext_resource type="Script" uid="uid://50j13gyefjqq" path="res://person.gd" id="1_5dovg"]
+[ext_resource type="Texture2D" uid="uid://dm0n0h8x7udve" path="res://assets/output-onlinepngtools.png" id="2_jf287"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4n5y"]
+atlas = ExtResource("2_jf287")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8487m"]
+atlas = ExtResource("2_jf287")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfaeq"]
+atlas = ExtResource("2_jf287")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jjoq"]
+atlas = ExtResource("2_jf287")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym70v"]
+atlas = ExtResource("2_jf287")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qhow"]
+atlas = ExtResource("2_jf287")
+region = Rect2(96, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_526uv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4n5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8487m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfaeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jjoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym70v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qhow")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yhvuw"]
+radius = 9.0
+
+[node name="person" type="Node2D"]
+script = ExtResource("1_5dovg")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_526uv")
+autoplay = "default"
+frame = 1
+frame_progress = 0.153913
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_yhvuw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

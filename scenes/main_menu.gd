@@ -1,6 +1,6 @@
-extends Area2D
+extends Control
 
-
+const CAVE_LEVEL = preload("res://scenes/cave_level.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -11,7 +11,6 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
-		body.position = body.init_pos
-		Global.reset()
+		get_tree().change_scene_to_packed(CAVE_LEVEL)
