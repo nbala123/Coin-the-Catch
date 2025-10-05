@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://04afi8w47fxf"]
+
+[ext_resource type="Script" uid="uid://cxe0jiq052imi" path="res://scripts/ender.gd" id="1_32iky"]
+[ext_resource type="Texture2D" uid="uid://csfqqcjlysoex" path="res://assets/output-onlinepngtools (2).png" id="2_e6m72"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbsqh"]
+radius = 26.0
+
+[node name="ender" type="Area2D"]
+script = ExtResource("1_32iky")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_e6m72")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wbsqh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -3,7 +3,7 @@ extends Control
 const CAVE_LEVEL = preload("res://scenes/cave_level.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$last.text = "Last Score: " + str(Global.people_collected) + " people with " + str(Global.deaths) + " deaths"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

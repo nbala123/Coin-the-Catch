@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://dlriaxjp1dbl6"]
+[gd_scene load_steps=15 format=4 uid="uid://dlriaxjp1dbl6"]
 
 [ext_resource type="FontFile" uid="uid://b32p4plrk65fb" path="res://assets/MegamaxJonathanToo-YqOq2.ttf" id="1_bqqt6"]
 [ext_resource type="Script" uid="uid://cxcpofrpj6w06" path="res://scenes/main_menu.gd" id="1_wu84c"]
@@ -329,6 +329,10 @@ font = ExtResource("1_bqqt6")
 font_size = 36
 font_color = Color(1, 1, 1, 0.133333)
 
+[sub_resource type="LabelSettings" id="LabelSettings_oa1go"]
+font = ExtResource("1_bqqt6")
+font_size = 26
+
 [node name="main_menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -356,7 +360,7 @@ anchor_bottom = 1.0
 offset_top = -41.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Fall to Play"
+text = "Fall to Start"
 label_settings = SubResource("LabelSettings_rtw2f")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -462,5 +466,16 @@ Space/Up arrow/w to jump"
 label_settings = SubResource("LabelSettings_8ln24")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="last" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 37.0
+grow_horizontal = 2
+text = "Last Score: _________"
+label_settings = SubResource("LabelSettings_oa1go")
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
