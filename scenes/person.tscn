@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c0jweem4jij20"]
+[gd_scene load_steps=12 format=3 uid="uid://c0jweem4jij20"]
 
 [ext_resource type="Script" uid="uid://50j13gyefjqq" path="res://person.gd" id="1_5dovg"]
 [ext_resource type="Texture2D" uid="uid://dm0n0h8x7udve" path="res://assets/output-onlinepngtools.png" id="2_jf287"]
+[ext_resource type="AudioStream" uid="uid://bltq3xiuhf1p1" path="res://assets/Picked Coin Echo 2.wav" id="3_jf287"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h4n5y"]
 atlas = ExtResource("2_jf287")
@@ -57,6 +58,7 @@ animations = [{
 radius = 9.0
 
 [node name="person" type="Node2D"]
+scale = Vector2(2, 2)
 script = ExtResource("1_5dovg")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -69,5 +71,8 @@ frame_progress = 0.153913
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_yhvuw")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_jf287")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

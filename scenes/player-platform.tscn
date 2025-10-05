@@ -294,6 +294,9 @@ position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_gwo0i")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 drag_left_margin = 0.05
 drag_top_margin = 0.05
 drag_right_margin = 0.05

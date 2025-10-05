@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://to43ibeuo2xj"]
+
+[ext_resource type="Script" uid="uid://ds78jyksmn7f6" path="res://scripts/overlay.gd" id="1_r2eog"]
+[ext_resource type="FontFile" uid="uid://b32p4plrk65fb" path="res://assets/MegamaxJonathanToo-YqOq2.ttf" id="2_sfd0e"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p5j10"]
+font = ExtResource("2_sfd0e")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_r2eog"]
+font = ExtResource("2_sfd0e")
+font_size = 32
+
+[node name="overlay" type="CanvasLayer"]
+script = ExtResource("1_r2eog")
+
+[node name="points" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 440.0
+offset_bottom = 44.0
+text = "__ People Collected"
+label_settings = SubResource("LabelSettings_p5j10")
+
+[node name="deaths" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 55.0
+offset_right = 438.0
+offset_bottom = 92.0
+text = "__ Deaths"
+label_settings = SubResource("LabelSettings_r2eog")

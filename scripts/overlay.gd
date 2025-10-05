@@ -1,23 +1,12 @@
-extends Node
+extends CanvasLayer
 
-var people_collected = 0
-var deaths = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
-func collected():
-	people_collected += 1
-	
-func death():
-	deaths += 1
-
-func reset():
-	deaths = 0
-	people_collected = 0
+	$points.text = str(Global.people_collected) + " People Collected!"
+	$deaths.text = str(Global.deaths) + " Death(s)"

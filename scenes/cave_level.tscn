@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=4 uid="uid://t68oy8htij4p"]
+[gd_scene load_steps=15 format=4 uid="uid://t68oy8htij4p"]
 
 [ext_resource type="Texture2D" uid="uid://bp2ucu1xfr32l" path="res://assets/tileset-cave.png" id="1_br21b"]
 [ext_resource type="PackedScene" uid="uid://bplpjstd12ohm" path="res://scenes/player-platform.tscn" id="2_sfygl"]
 [ext_resource type="Script" uid="uid://ckivsny1qe8qr" path="res://scripts/killers.gd" id="3_m2ful"]
 [ext_resource type="PackedScene" uid="uid://c0jweem4jij20" path="res://scenes/person.tscn" id="4_hs0xw"]
+[ext_resource type="PackedScene" uid="uid://to43ibeuo2xj" path="res://scenes/overlay.tscn" id="5_260ue"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sfygl"]
 texture = ExtResource("1_br21b")
@@ -421,7 +422,692 @@ shape = SubResource("RectangleShape2D_bpqvn")
 position = Vector2(10384, 63)
 shape = SubResource("RectangleShape2D_bpqvn")
 
-[node name="person" parent="." instance=ExtResource("4_hs0xw")]
+[node name="people" type="Node2D" parent="."]
+
+[node name="person" parent="people" instance=ExtResource("4_hs0xw")]
 position = Vector2(134, -28)
+
+[node name="person2" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(437, -27)
+
+[node name="person3" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(480, -27)
+
+[node name="person4" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(520, -28)
+
+[node name="person5" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(752, -119)
+
+[node name="person6" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(796, -119)
+
+[node name="person7" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1017, -216)
+
+[node name="person8" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1058, -217)
+
+[node name="person9" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(913, -436)
+
+[node name="person10" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(367, -288)
+
+[node name="person11" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(570, -192)
+
+[node name="person12" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(583, -365)
+
+[node name="person13" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(624, -367)
+
+[node name="person14" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(666, -367)
+
+[node name="person15" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(332, -553)
+
+[node name="person16" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(462, -554)
+
+[node name="person17" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(815, -601)
+
+[node name="person18" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1011, -674)
+
+[node name="person19" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1121, -503)
+
+[node name="person20" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1437, -552)
+
+[node name="person21" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1487, -552)
+
+[node name="person22" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1585, -553)
+
+[node name="person23" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1341, -289)
+
+[node name="person24" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1072, -25)
+
+[node name="person27" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1111, -25)
+
+[node name="person28" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1354, -22)
+
+[node name="person29" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1397, -22)
+
+[node name="person30" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1440, -25)
+
+[node name="person31" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1665, -25)
+
+[node name="person32" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1671, -146)
+
+[node name="person33" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1743, -312)
+
+[node name="person34" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1890, -313)
+
+[node name="person35" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1848, -312)
+
+[node name="person36" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(2082, -359)
+
+[node name="person37" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(2137, -359)
+
+[node name="person38" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1879, -692)
+
+[node name="person39" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1812, -693)
+
+[node name="person40" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1920, -693)
+
+[node name="person41" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(2102, -551)
+
+[node name="person42" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(2143, -552)
+
+[node name="person43" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(2184, -552)
+
+[node name="person44" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(2317, -479)
+
+[node name="person45" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(2357, -479)
+
+[node name="person46" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(2625, -384)
+
+[node name="person47" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(2474, -266)
+
+[node name="person48" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3071, -526)
+
+[node name="person49" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3217, -216)
+
+[node name="person50" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3836, -434)
+
+[node name="person51" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3918, -435)
+
+[node name="person52" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4009, -435)
+
+[node name="person53" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4073, -434)
+
+[node name="person54" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4189, -435)
+
+[node name="person55" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4274, -246)
+
+[node name="person56" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3839, -243)
+
+[node name="person57" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4548, -334)
+
+[node name="person58" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4872, -458)
+
+[node name="person59" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4367, -526)
+
+[node name="person60" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4703, -621)
+
+[node name="person61" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5231, -483)
+
+[node name="person62" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5448, -339)
+
+[node name="person63" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5639, -269)
+
+[node name="person64" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5773, -312)
+
+[node name="person65" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5979, -313)
+
+[node name="person66" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6195, -406)
+
+[node name="person67" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6257, -409)
+
+[node name="person68" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6511, -575)
+
+[node name="person92" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6814, -524)
+
+[node name="person93" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6902, -501)
+
+[node name="person94" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7012, -288)
+
+[node name="person205" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5727, 149)
+
+[node name="person206" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5937, 152)
+
+[node name="person207" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6395, 149)
+
+[node name="person208" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6487, 148)
+
+[node name="person209" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6467, 111)
+
+[node name="person210" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6423, 108)
+
+[node name="person211" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7041, 140)
+
+[node name="person212" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7932, 146)
+
+[node name="person213" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7975, 147)
+
+[node name="person214" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8013, 147)
+
+[node name="person215" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8053, 148)
+
+[node name="person216" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8159, 148)
+
+[node name="person217" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8200, 148)
+
+[node name="person218" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8174, 111)
+
+[node name="person219" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8136, 108)
+
+[node name="person220" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8095, 109)
+
+[node name="person221" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8054, 109)
+
+[node name="person222" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8014, 108)
+
+[node name="person223" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7971, 108)
+
+[node name="person224" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7971, 108)
+
+[node name="person225" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7994, 73)
+
+[node name="person226" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7994, 73)
+
+[node name="person227" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8040, 71)
+
+[node name="person228" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8081, 71)
+
+[node name="person95" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7172, -381)
+
+[node name="person96" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7562, -141)
+
+[node name="person97" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7649, -142)
+
+[node name="person98" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7813, -239)
+
+[node name="person99" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7882, -237)
+
+[node name="person100" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7882, -237)
+
+[node name="person101" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7934, -237)
+
+[node name="person102" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8079, -359)
+
+[node name="person103" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8132, -360)
+
+[node name="person104" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8173, -358)
+
+[node name="person105" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8268, -360)
+
+[node name="person106" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7868, -456)
+
+[node name="person107" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7805, -455)
+
+[node name="person108" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7627, -548)
+
+[node name="person109" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7572, -549)
+
+[node name="person110" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7531, -549)
+
+[node name="person111" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7430, -598)
+
+[node name="person112" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7537, -788)
+
+[node name="person113" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7537, -788)
+
+[node name="person153" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7686, -937)
+
+[node name="person154" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7469, -1080)
+
+[node name="person155" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7767, -1175)
+
+[node name="person156" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7479, -1320)
+
+[node name="person157" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7563, -1319)
+
+[node name="person158" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7721, -1437)
+
+[node name="person162" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7539, -1508)
+
+[node name="person163" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7432, -1512)
+
+[node name="person164" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7300, -1510)
+
+[node name="person165" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7255, -1510)
+
+[node name="person166" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7255, -1510)
+
+[node name="person167" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7212, -1509)
+
+[node name="person168" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7147, -1510)
+
+[node name="person169" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7104, -1511)
+
+[node name="person170" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7058, -1511)
+
+[node name="person171" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7014, -1509)
+
+[node name="person172" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6971, -1509)
+
+[node name="person173" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6896, -1508)
+
+[node name="person174" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6614, -1605)
+
+[node name="person175" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6336, -1510)
+
+[node name="person176" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6222, -1391)
+
+[node name="person177" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5936, -1345)
+
+[node name="person178" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5831, -1410)
+
+[node name="person179" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5778, -1460)
+
+[node name="person180" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5319, -1580)
+
+[node name="person181" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5065, -1651)
+
+[node name="person182" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4960, -1674)
+
+[node name="person183" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4793, -1628)
+
+[node name="person184" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4753, -1627)
+
+[node name="person185" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4721, -1603)
+
+[node name="person186" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4658, -1601)
+
+[node name="person187" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4621, -1616)
+
+[node name="person188" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4628, -1657)
+
+[node name="person189" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4665, -1639)
+
+[node name="person190" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4716, -1645)
+
+[node name="person191" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4685, -1677)
+
+[node name="person192" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4650, -1685)
+
+[node name="person193" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4726, -1681)
+
+[node name="person194" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4764, -1664)
+
+[node name="person195" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4693, -1621)
+
+[node name="person196" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4722, -1843)
+
+[node name="person197" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4769, -1845)
+
+[node name="person198" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4769, -1845)
+
+[node name="person199" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4842, -1820)
+
+[node name="person200" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4934, -1844)
+
+[node name="person201" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4980, -1844)
+
+[node name="person202" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5024, -1843)
+
+[node name="person203" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5024, -1843)
+
+[node name="person204" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5066, -1846)
+
+[node name="person159" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8074, -1292)
+
+[node name="person160" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8125, -1291)
+
+[node name="person161" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8168, -1293)
+
+[node name="person114" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(7870, -674)
+
+[node name="person115" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8248, -626)
+
+[node name="person116" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8353, -628)
+
+[node name="person117" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8293, -626)
+
+[node name="person118" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8494, -717)
+
+[node name="person119" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8546, -717)
+
+[node name="person120" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8546, -717)
+
+[node name="person121" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8629, -718)
+
+[node name="person122" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8632, -460)
+
+[node name="person123" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8758, -460)
+
+[node name="person124" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(8548, -463)
+
+[node name="person125" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9041, -606)
+
+[node name="person126" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9132, -608)
+
+[node name="person127" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9177, -607)
+
+[node name="person128" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9389, -626)
+
+[node name="person129" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9460, -697)
+
+[node name="person130" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9536, -772)
+
+[node name="person131" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9536, -772)
+
+[node name="person132" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9665, -841)
+
+[node name="person133" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9730, -841)
+
+[node name="person134" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9772, -843)
+
+[node name="person135" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9813, -841)
+
+[node name="person136" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9854, -842)
+
+[node name="person137" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9856, -880)
+
+[node name="person138" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9812, -882)
+
+[node name="person139" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9766, -882)
+
+[node name="person140" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9766, -882)
+
+[node name="person141" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9725, -882)
+
+[node name="person142" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9682, -883)
+
+[node name="person143" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9653, -920)
+
+[node name="person144" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9697, -918)
+
+[node name="person145" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9744, -919)
+
+[node name="person146" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9793, -918)
+
+[node name="person147" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9846, -921)
+
+[node name="person148" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9985, -764)
+
+[node name="person149" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9896, -643)
+
+[node name="person150" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9938, -644)
+
+[node name="person151" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(9980, -645)
+
+[node name="person152" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(10021, -645)
+
+[node name="person69" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(6121, -692)
+
+[node name="person70" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5914, -549)
+
+[node name="person71" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5603, -600)
+
+[node name="person72" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5801, -814)
+
+[node name="person73" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5893, -816)
+
+[node name="person74" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5483, -959)
+
+[node name="person75" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4801, -1007)
+
+[node name="person76" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4858, -1008)
+
+[node name="person77" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4949, -1008)
+
+[node name="person78" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(5052, -1052)
+
+[node name="person79" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4465, -1126)
+
+[node name="person80" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4161, -1176)
+
+[node name="person81" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(4074, -1175)
+
+[node name="person82" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3753, -1298)
+
+[node name="person83" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3703, -1297)
+
+[node name="person84" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3657, -1296)
+
+[node name="person85" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3613, -1296)
+
+[node name="person86" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3568, -1296)
+
+[node name="person87" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3518, -1296)
+
+[node name="person88" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3474, -1297)
+
+[node name="person89" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3474, -1297)
+
+[node name="person90" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3432, -1297)
+
+[node name="person91" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(3348, -1297)
+
+[node name="person25" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1409, -357)
+
+[node name="person26" parent="people" instance=ExtResource("4_hs0xw")]
+position = Vector2(1409, -357)
+
+[node name="overlay" parent="." instance=ExtResource("5_260ue")]
 
 [connection signal="body_entered" from="killers" to="killers" method="_on_body_entered"]
