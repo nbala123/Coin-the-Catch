@@ -343,6 +343,7 @@ offset_left = -2827.0
 offset_top = -2841.0
 offset_right = 14360.0
 offset_bottom = 3068.0
+color = Color(0, 0, 0, 1)
 
 [node name="player-platform" parent="." instance=ExtResource("2_sfygl")]
 position = Vector2(16, -22)
